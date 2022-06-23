@@ -1,0 +1,115 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="654,1380" sap2010:WorkflowViewState.IdRef="Login_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="476,1315" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Login • Instagram" sap:VirtualizedContainerService.HintSize="434,1223" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ff9eda7c-d5d1-4a64-b0c2-a99535e1540a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1007" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="userName" />
+              <Variable x:TypeArguments="x:String" Name="u" />
+              <Variable x:TypeArguments="ss:SecureString" Name="p" />
+              <Variable x:TypeArguments="ss:SecureString" Name="password" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="IG_Credentials" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="334,180" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[userName]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ff9eda7c-d5d1-4a64-b0c2-a99535e1540a" Text="[userName]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.instagram.com/accounts/login/" DesignTimeRectangle="550, 325, 258, 36" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='_2hvTZ pexuQ zyHYP' aaname='' /&gt;" Guid="b9d70d6a-60bb-46a6-90fe-b7b4fc4f712e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQYAAAAoCAYAAAAc5FTOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPQSURBVHhe7ZhNbuMwDEbn/oucwCdIjpDeodkX2U02OUI3HlGyLIqUHMdoB0j8BDygsn5IkdRnp39GGo1GM20Whvv9Pl6v1/Hr6wsAdk4UBhGF7+9vAIBIFAb5UmgNAsA+icIgnw6tQQDYJwgDADgQBgBwIAwA4EAYAMCBMACAA2EAAAfCAAAOhAEAHAgDADgQBgBwIAwA4FgvDJ/H8XA4FE6XeexyOozHTzP/DXjXc+2ev+dxOBzHS/j79jGMw8etPW/HPCcMRgxyQBEGeFUQhjabhUH3EQZ4VRCGNj8oDJfx2PiZkT7byk+QctFkfvick33cWEA9Pwzn8ZafK1JSL+N5sPNu4dkwnv/mubpv7conpYx7W+5clR9qTWD2Xc4b5p3D2rR3nm9YiGfv7OJPfj4Xs7O3FFd1Fr3HEzHpnnsB7bfeK+XvnHzSschUtVNiafMiPsheaZ7Ku46jfj7FTPxAGNpsFIZUHLkoUuJz4iRhUxJiYvUFVWO5SPVlyEVT2eonLxVD3k/7JH9ru7pf2+3vYc+V+skPu7/sOc2bivnhhTFnLH27dyJdhtxXc5y9hbhWKJ9Xx2Th3B1iDNU5496Vnc56dXljX8Wryst0/lwfev8KHW+1t8xHGDyb//mog1kXreqHNTboJRG2qEo/FUyxFWkk2ya19G0B676xqwsmoM9iz1UKarpIFeqiNi+iwdjV/arwI+ly1vYm35y9flylX8f22ZgsnDuvrRC/tS9CsWXzVyE+WFvTOeu8LPlu4pbjhDA8ZPtPCYW9QHM/rLFBL4kwCV1bMAo7r/T/hzBo31tzGmMaG08XX7GRi9meR/GEMEh86kuzRRg6524iNuz82p9unl08CnVeer6LbTVPxwlheMjvCoMkoHqjSBI7xaj7YmtFAfaFIfkwj1V+9Aop9fVZ5G87lvZMRdcsKHdRO0Sfih/WVqJc3vZ4wNnrx7X4P617OiYL5+5g/dbitHgpK/9qij9Cz3d5XtZHuwjDan5XGKQfL3kojoluQk0/JrK5rmCTWvVjYU3rw1vruPWL4aT8r84v+0zPow1fdHFe2L9XeLJ/Xh/txP3T5cvPy9r6efUbe6Uw/ERMeue+nNqX2PmtfH14KU3t5Lnen7bvuoaGEN85TgjDQ9YLA2zi9nHsXJh3Ilz+kxYneHUQhl9F3pb67f2myBu4+pqCVwdhAAAHwgAADoQBABwIAwA4EAYAcCAMAOBAGADAgTAAgANhAABHFIbr9docBIB9EoXhfr83BwFgn0RhkCbiIF8O8rMCAPbNLAw0Go2W2jj+A/cg+lXf3JEyAAAAAElFTkSuQmCC" InformativeScreenshot="6f103e154a374e497a2a92989720ff44.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login • Instagram' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,241" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="ff9eda7c-d5d1-4a64-b0c2-a99535e1540a" SecureText="[password]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.instagram.com/accounts/login/" DesignTimeRectangle="550, 324, 258, 36" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='_2hvTZ pexuQ zyHYP' aaname='' /&gt;" Guid="c47720c3-44b8-4691-8fbe-b4ac2e284723" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQYAAAAoCAYAAAAc5FTOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVHhe7dlBbqswEIDh3n/hE3ACOAK5Q9hH7JINR8jG9QzGGMaNYtJFJH5Ln9SHIV3N/0z641ksFmu3UhimafLjOPrb7Qbg5DQMEoXn8wkASsMgJ4XSJoBz0jDI0aG0CeCcCAMAgzAAMAgDAIMwADAIAwCDMAAwCAMAgzAAMAgDAIMwADAIAwDj/TBcW++cW3VD+b6v8/B90/j+XtoDUFIXhiwGQ+d8c3ls7/lKhAGodTgM5t9fizAAtf4hDINvs1eM9RQhA7leb6/la3LymPeCe+8b1/oh/o7HpVn35PfF55zLBl2eaXrfh89xy7P5vV3YIwxAlYNhmAc8DW0ikciGc3+iKFyT4V9ioj+HIV4jEgdaB30NxiYg+vM+LlkI9FnCANQ4/OVj/v2CDPS6F4cwDuzme4i/roX/8R8agjDs4ffM+yEyen13cojSSSM9H/fS88u9WWDSNQCvHH+ViDQKm5PEdgiXaOSDvb22PBNCoJ8Tg5ANeE0Y5F7CAHzm4zBs/jqhJ4LCEJaeza7p4HdtGv6hm18p0ufIva9eJfITQ74n9FnCANT4OAzzIMbXiPAq0C4DrQO5vF7EQS1dS5+xG+Z82IPllDHLBn0fhv29fPkIVHs/DABOgzAAMAgDAIMwADAIAwCDMAAwCAMAgzAAMAgDAIMwADAIAwBDwzCOY3ETwDlpGKZpKm4COCcNgyyJg5wc5LUCwLmlMLBYLNa8vP8FNFhw88amigcAAAAASUVORK5CYII=" InformativeScreenshot="d23f12ddbffcf9c3bb3b6c6a5c192268.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login • Instagram' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ff9eda7c-d5d1-4a64-b0c2-a99535e1540a" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.instagram.com/accounts/login/" DesignTimeRectangle="549, 375, 268, 30" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div' idx='3' parentid='loginForm' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='             qF0y9          Igw0E     IwRSH      eGOV_       acqo5   _4EzTm    bkEs3                          CovQj                  jKUp7          DhRcB                                                    ' parentid='loginForm' tag='DIV' aaname='' check:innerText='Log In' /&gt;" Guid="6a610a4e-bbff-49bd-b626-beeb4c6345f6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARAAAAAiCAYAAACXz4YHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ9SURBVHhe7Z39ahpBFEf7/o9T6CsUKRREkEARrCCCiMZmm/oRd27v3d3rjmbXutIEnJwfHNzMnVn/MHOYmRj2kxBCyI1BIISQm3MikPUuyLd5Ll9+HuTzGACgxJxgbjBHxDkKxAqIAwAuYY6IJXIUiNmlaQAAQIy5wnMUCKsPALgGc4XnKJCmjgAATXgQCAB0xoNAAKAzHgQCAJ3xIBAA6IwHgQBAZzwIJDmCZPaB7kND7X+Ty8K+EpAHGTbWIVU8CCQ5EAi8PR4EkhwIBN4eDwJJjssCGWRBtvU3kWX/EmQ0r+u9dZBnr+vrfFNeZtnpfUpeC2SyL/vP9D7b6l8mcn2P4fR8LNwzHgSSHO0C6WnB5vt+F2S8yuXHs15b30MlgIVOevtZO83WuTw81RLoKhCTxniZy6S4ochWrfR6PNwrHgSSHG0C0clun7tO9oeovf/HOousHnV1El17/evvsq2rQOb6ZkWfqa5orOFdtlTwXngQSHK0CaSlvWgsBTHZldeTlvrJuIJ2gdT3uLylgvvEg0CS47YVyGJ5kGF13mHX53UEAjEeBJIc1YQ9BJlmNXbm0S/2EjqX/QxE2/0MpG9jH0NxRlKMXZf1W89AEEjaeBBIclQT9iz7jR1i5jLQos7lMvpqMhnM6vFx3Q5CR5V0sqf4PRwE8lHxIBC4yKj6K0q8rQHwIBCICLLSVcfsVy7fl7qN2ejiwn45tK3X2B8+Kh4EAhHVQaunYYsDYHgQCAB0xoNAAKAzHgQCAJ3xHAXCYx0A4BoaH+vAg6UA4BoaHyzFoy0B4F+YIxofbWmxgtkFkQBAjDnB3BDLw3IiEEII6RIEQgi5MSJ/Acj3hMjZ+JcQAAAAAElFTkSuQmCC" InformativeScreenshot="b1411a60f15c59bcf5c04cd2799ea3ad.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login • Instagram' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="4ccd820693c091fb24f838a677ffaa40.png" Selector="&lt;html app='chrome.exe' title='Login • Instagram' /&gt;" Url="https://www.instagram.com/accounts/login/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
