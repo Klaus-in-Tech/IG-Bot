@@ -113,7 +113,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="418,416" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[new TimeSpan(0,0,3)]">
+                    <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="418,416" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[new TimeSpan(0,0,3)]">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
                           <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_5">
@@ -122,13 +122,13 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To User Profile" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[String.Format(&quot;https://www.instagram.com/{0}/&quot;,item.ToString)]" />
+                            <ui:NavigateTo Browser="{x:Null}" ContinueOnError="True" DisplayName="Navigate To User Profile" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[String.Format(&quot;https://www.instagram.com/{0}/&quot;,item.ToString)]" />
                           </Sequence>
                         </ActivityAction>
                       </ui:RetryScope.ActivityBody>
                       <ui:RetryScope.Condition>
                         <ActivityFunc x:TypeArguments="x:Boolean">
-                          <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                          <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists " sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                             <ui:UiElementExists.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="086286b2-8f0d-47d6-8a2d-1fb0ef5e36e1" InformativeScreenshot="fbd01c5e4cbf5ebdb1ee9a3e73c06913" Selector="&lt;webctrl tag='H2' innertext='*' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -142,13 +142,19 @@
                           </ui:UiElementExists>
                         </ActivityFunc>
                       </ui:RetryScope.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ui:RetryScope>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Send_Message workflow" sap:VirtualizedContainerService.HintSize="418,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="IG Workflows\Send_Message.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[item.ToString]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[item.ToString]" />
                   </Sequence>
                 </ActivityAction>
               </ui:ForEach.Body>
